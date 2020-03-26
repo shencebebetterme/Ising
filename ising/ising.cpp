@@ -11,10 +11,12 @@ namespace fs = std::filesystem;
 
 
 #if USE_PARALLEL_FOR
-#define MyPolicy std::execution::par_unseq
+//#define MyPolicy std::execution::par_unseq
+#define MyPolicy std::execution::par
 #else 
 #define MyPolicy std::execution::seq
 #endif
+
 
 int L;
 double Tmin;
