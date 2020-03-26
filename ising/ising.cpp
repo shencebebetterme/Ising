@@ -17,7 +17,6 @@ namespace fs = std::filesystem;
 #define MyPolicy std::execution::seq
 #endif
 
-
 int L;
 double Tmin;
 double Tmax;
