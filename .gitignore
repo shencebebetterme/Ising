@@ -19,6 +19,8 @@ bin-int/
 bin*/
 *.asm
 *.tlog
+*.sln
+*.vcxproj
 
 [Dd]ebug/
 [Dd]ebugPublic/
