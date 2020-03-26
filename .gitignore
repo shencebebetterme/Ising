@@ -14,6 +14,12 @@
 *.userprefs
 
 # Build results
+bin/
+bin-int/
+bin*/
+*.asm
+*.tlog
+
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
