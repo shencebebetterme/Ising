@@ -21,6 +21,7 @@ bin*/
 *.tlog
 *.sln
 *.vcxproj
+*.vcxproj.filters
 
 [Dd]ebug/
 [Dd]ebugPublic/

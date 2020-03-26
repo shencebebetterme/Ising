@@ -49,7 +49,7 @@ std::ostream& operator<<(std::ostream& s, const TMpair& tm) {
 int main(void)
 {
     
-    cout << "\nSimulation of the 2D square lattice Ising model, enter linear dimension L: ";
+    cout << "\nSimulation of the 2D square lattice Ising model,\n enter linear dimension L: ";
     cin >> L;
 
     cout << "\nenter the min temperature: ";
