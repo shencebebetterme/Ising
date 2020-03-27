@@ -24,7 +24,7 @@ double T_delta;
 double B;
 int equilibration_steps;
 int datanum;
-char name[256];
+//char name[256];
 bool use_parallel;
 //const double T_delta = 0.1;
 
@@ -65,14 +65,21 @@ int main(void)
     cout << "\nenter strength of external magnetic field: ";
     cin >> B;
 
+    /*
 	cout << "\nHow many Monte Carlo steps per spin for equilibration?: ";
 	cin >> equilibration_steps;
+    */
+    equilibration_steps = 10000;
 
     cout << "\nHow many Monte Carlo steps per spin do you want to run?: ";
     cin >> datanum;
 
+    /*
     cout << "\nEnter the output file name: ";
     cin >> name;
+    */
+    std::string name_str = "L=" + to_string(L) + " Tmin=" + to_string(Tmin) + " Tmax=" + to_string(Tmax) + " B=" + to_string(B) + " datanum=" + to_string(datanum);
+    const char* name = name_str.c_str();
 
     // remove duplicate file
     std::filesystem::remove(name);
