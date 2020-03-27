@@ -78,7 +78,7 @@ int main(void)
     cout << "\nEnter the output file name: ";
     cin >> name;
     */
-    std::string name_str = "L=" + to_string(L) + " Tmin=" + to_string(Tmin) + " Tmax=" + to_string(Tmax) + " B=" + to_string(B) + " datanum=" + to_string(datanum);
+    std::string name_str = "L=" + to_string(L) + " Tmin=" + to_string(Tmin) + " Tmax=" + to_string(Tmax) + " B=" + to_string(B) + " datanum=" + to_string(datanum) + ".txt";
     const char* name = name_str.c_str();
 
     // remove duplicate file
