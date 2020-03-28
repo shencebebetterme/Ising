@@ -31,7 +31,9 @@ bool use_parallel;
 double getM(double T);
 void inline LogM(double T);
 
-ofstream tmp_file("tmp_file.txt", ios::out);
+// a stupid way of generating random name for tmp file
+std::string tmp_name = to_string(dis(gen)).c_str();
+ofstream tmp_file(tmp_name, ios::out);
 
 struct TMpair {
 public:
@@ -50,7 +52,7 @@ std::ostream& operator<<(std::ostream& s, const TMpair& tm) {
 int main(void)
 {
     
-    cout << "\nSimulation of the 2D square lattice Ising model,\n enter linear dimension L: ";
+    cout << "\nSimulation of the 2D square lattice Ising model,\n\nenter linear dimension L: ";
     cin >> L;
 
     cout << "\nenter the min temperature: ";
@@ -95,8 +97,8 @@ int main(void)
 
 
     tmp_file.close();
-    std::filesystem::copy("tmp_file.txt", name);
-    std::filesystem::remove("tmp_file.txt");
+    std::filesystem::copy(tmp_name, name);
+    std::filesystem::remove(tmp_name);
 
 }
 
