@@ -1,3 +1,8 @@
+/*
+TBB="/home/scbebetterme/TBB/tbb"
+TBB_RELEASE="${TBB}/build/linux_intel64_gcc_cc7.5.0_libc2.27_kernel5.0.0_release"
+g++-9 -ggdb3 -O3 -std=c++17 -Wall -Wextra -pedantic -I "${TBB}/include" -L "${TBB_RELEASE}" -Wl,-rpath,"${TBB_RELEASE}" -o main.out test1.cpp -ltbb
+*/
 
 #include "pch.h"
 
@@ -80,7 +85,7 @@ int main(void)
     cout << "\nEnter the output file name: ";
     cin >> name;
     */
-    std::string name_str = "L=" + to_string(L) + " Tmin=" + to_string(Tmin) + " Tmax=" + to_string(Tmax) + " B=" + to_string(B) + " datanum=" + to_string(datanum) + ".txt";
+    std::string name_str ="result/" + "L=" + to_string(L) + " Tmin=" + to_string(Tmin) + " Tmax=" + to_string(Tmax) + " B=" + to_string(B) + " datanum=" + to_string(datanum) + ".txt";
     const char* name = name_str.c_str();
 
     // remove duplicate file
